@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Моє портфоліо</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Моє портфоліо</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#works">Каталог робіт</a></li>
+            <li><a href="#about">Про себе</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Розділ "Каталог робіт" -->
+        <section id="works">
+            <h2>Каталог робіт</h2>
+            <!-- Тут будуть ваши роботи -->
+            <ul>
+                <li>
+                    <h3>Сайт портфоліо</h3>
+                    <a href="https://github.com/username/project1" class="project-link">GitHub</a>
+                </li>
+                <li>
+                    <h3>Розробка мобільного застосунку стеження за витратами</h3>
+                    <a href="https://github.com/username/project2" class="project-link">GitHub</a>
+                </li>
+                <!-- Додайте інші роботи за аналогією -->
+            </ul>
+        </section>
+
+        <!-- Розділ "Про себе" -->
+        <section id="about">
+            <h2>Про себе</h2>
+            <!-- Тут буде опис про вас -->
+            <img src="D:\Univer\2 semester\WEB\Portfolio\photos\me.jpg" alt="Мельниченко Катерина" class="profile-picture" id="myImg" onclick="openModal();">
+
+    <p>Привіт! Мене звуть Мельниченко Катерина, і я є веб-розробником з великим інтересом до фронтенду. Мої навички включають HTML, CSS, JavaScript, PHP та інші веб-технології.</p>
+    <p>Я навчаюся в Поліському національному університеті, де я отримую цінний досвід та знання. Також я працюю смарт-тестувальником в Українській компанії, де я отримую практичний досвід в області тестування та розробки програмного забезпечення.</p>
+</section>
+<br><br><br>
+    <!-- Розділ "Відгуки" -->
+    <section id="reviews">
+        <h2>Відгуки</h2>
+    <form id="review-form">
+        <input type="text" id="name" placeholder="Ваше ім'я" required>
+        <textarea id="message" placeholder="Ваш відгук" required></textarea>
+        <button type="submit">Відправити</button>
+    </form>
+    <div id="review-header" style="display: none;">
+        <h3>Відгуки людей:</h3>
+    </div>
+    <ul id="review-list">
+        <!-- Відгуки будуть додаватись сюди за допомогою JavaScript -->
+    </ul>
+    </section>
+
+    <!-- Розділ "Контакти" -->
+    <section id="contact">
+        <h2>Контакти</h2>
+        <!-- Тут будуть ваші контактні дані -->
+        <p>Email: kasiamel01@gmail.com</p>
+        <p>Телефон: 123-456-7890</p>
+        <!-- Додайте інші контактні дані за необхідності -->
+    </section>
+</main>
+
+<footer>
+    <p>© 2023 Всі права захищені</p>
+</footer>
+
+<script>
+document.getElementById('review-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var name = document.getElementById('name').value;
+    var message = document.getElementById('message').value;
+    
+    var reviewList = document.getElementById('review-list');
+    var li = document.createElement('li');
+    li.innerHTML = '<strong>' + name + ':</strong> ' + message;
+    reviewList.appendChild(li);
+    
+    document.getElementById('name').value = '';
+    document.getElementById('message').value = '';
+
+    // Показуємо заголовок відгуків, коли додається перший відгук
+    if (reviewList.children.length === 1) {
+        document.getElementById('review-header').style.display = 'block';
+    }
+});
+
+</script>
+<script>
+function openModal() {
+  var modal = document.getElementById("myModal");
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  
+  modal.style.display = "block";
+  modalImg.src = img.src;
+
+  var span = document.getElementsByClassName("close")[0];
+
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+
+</html>
+
+

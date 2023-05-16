@@ -1,0 +1,190 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;  /* змінено */
+    padding: 20px;
+   
+}
+
+h1 {
+    margin: 0;
+    color: #fff;  /* змінено */
+    text-align: center;  /* додано */
+    padding: 20px 0;  /* додано */
+    font-size: 2.5em;  /* додано */
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /* додано */
+    background-color: #333;  /* додано */
+}
+
+nav ul li {
+    display: inline;
+    float: left;  /* додано */
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;  /* змінено */
+    transition: 0.3s;  /* додано */
+}
+
+nav ul li a:hover {
+    background-color: #111;  /* змінено */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #333;  /* змінено */
+    color: #fff;  /* змінено */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Стилі для розділів */
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#works {
+    margin-bottom: 30px;
+}
+
+#reviews {
+    margin-bottom: 30px;
+}
+
+#contact {
+    margin-bottom: 30px;
+}
+
+/* Стилі для форми відгуків */
+#review-form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#review-form input, #review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+#review-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#review-form button:hover {
+    background-color: #555;
+}
+
+/* Стилі для посилань на проекти */
+.project-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #555;
+}
+
+/* Стилі для фотографії */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
+
+/* Стилі для модального вікна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width:700px;
+}
+
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+#review-section {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#reviews-list div {
+    margin-bottom: 10px;
+}
+
+#reviews-list h4 {
+    margin: 0;
+    font-weight: bold;
+}
+
+#reviews-list p {
+    margin: 0;
+}
+
